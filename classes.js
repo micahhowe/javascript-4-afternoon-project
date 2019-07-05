@@ -30,7 +30,17 @@
 */
 
 //Code Here
-
+class Employee{
+  constructor(first_name,last_name,email,age){
+    this.first_name = first_name,
+    this.last_name = last_name,
+    this.email = email,
+    this.age = age
+  }
+  makeWidget(){
+    return `${this.first_name} ${this.last_name} Widget`
+  }
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -48,7 +58,18 @@
 */
 
 //Code Here
-
+class Manager extends Employee{
+  constructor(first_name,last_name,email,age){
+    super(first_name,last_name,email,age)
+    this.reports = []
+  }
+  hire(employee){
+    this.reports.push(employee)
+  }
+  fire(employee){
+    this.reports.splice(employee,1)
+  }
+}
 
 ////////// PROBLEM 3 //////////
 
