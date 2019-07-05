@@ -17,7 +17,13 @@
   email --> which is a string
   getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 */
-  
+let user = {
+  username: 'Micah',
+  email: 'micah@me.com',
+  getUsername: function (){
+    return this.username
+  }
+}
 
 //Code Here
 
@@ -40,7 +46,8 @@ class Animal {
     return this.name + ' is a ' + this.species + ' and likes to eat ' + this.food;
   }
 }
-
+let animal1 = new Animal('sparky', 'dog', 'beef')
+//console.log(animal1)
 //Code Here
 
 
